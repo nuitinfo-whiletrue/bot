@@ -2,8 +2,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
+    application
     kotlin("jvm") version "1.3.10"
 }
+
+val token: String by project
 
 group = "nuitinfo.whiletrue"
 version = "1.0-SNAPSHOT"
@@ -23,4 +26,12 @@ configure<JavaPluginConvention> {
 }
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+tasks.withType<JavaExec> {
+    args = listOf(token)
+}
+
+application {
+    mainClassName = "nuitinfo.whiletrue.bot.Bot"
+
 }
