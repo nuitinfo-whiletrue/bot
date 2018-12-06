@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
+    compile("org.telegram:telegrambots:4.1")
     testCompile("junit", "junit", "4.12")
 }
 
