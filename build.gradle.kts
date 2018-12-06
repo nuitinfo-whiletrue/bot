@@ -29,6 +29,7 @@ repositories {
 dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile("org.telegram:telegrambots:4.1")
+    compile(group = "com.eclipsesource.minimal-json", name = "minimal-json", version = "0.9.5")
     testCompile("junit", "junit", "4.12")
 }
 
