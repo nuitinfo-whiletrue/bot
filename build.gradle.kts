@@ -1,10 +1,21 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("org.jetbrains.dokka:dokka-gradle-plugin:0.9.17")
+    }
+}
+
 plugins {
     java
     application
     kotlin("jvm") version "1.3.10"
 }
+
+apply(plugin = "org.jetbrains.dokka")
 
 val token: String by project
 
