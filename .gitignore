@@ -68,3 +68,4 @@ fabric.properties
 gradle.properties
 .gradle/
 build/
+/.nb-gradle/

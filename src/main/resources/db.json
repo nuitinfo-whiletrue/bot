@@ -5,6 +5,37 @@
   },
   "*": {
     "type": "answer",
-    "text": "Je ne comprends pas le message!"
+    "text": "Apprends à parler, réfléchis à si je peux vraiment répondre à ta question et en suite reviens e voir, mais pas avant"
+  },
+  "ça va ?":{
+    "type":"answer",
+    "text": "oui, Je ne te demande pas comment toi tu vas, je t'avoue que je m'en fiche un peu"
+  },
+  "que sais tu faire ?":{
+    "type":"answer",
+    "text": "La plupart du temps j'essaye de te rabaisser ou de t'envoyer balader mais des fois je t'aide parceque tu me fais un peu pitié"
+  },
+  "t'es nul":{
+    "type":"answer",
+    "text": "Avec cette répartie je pense que tu peux viser le concours de clash de la 6eme B du collège Paul Froment"
+  },
+  "mange tes morts":{
+    "type":"answer",
+    "text": "Oh eh Lopez tu vas de calmer avant que je te soulève tes grands morts"
+  },
+  "salut":{
+    "type":"answer",
+    "text": "tu me parles mieux que ça petit, on dit \"bonjour monsieur\""
+  },
+  "bonjour monsieur":{
+    "type":"answer",
+    "text": "Je préfère ça ouais, salut petit"
+  },
+  "42":{
+    "type":"answer",
+    "text": "Félicitations vous êtes engagé !"
   }
+
+
+
 }
