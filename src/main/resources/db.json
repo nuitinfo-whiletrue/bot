@@ -16,7 +16,6 @@
     "text": ["Bonjour !", "Salut !"]
   },
   "/start": {
-    "type": "answer",
-    "text": "Bienvenue !"
+    "type": "none"
   }
 }

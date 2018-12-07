@@ -10,6 +10,7 @@ fun JsonObject.asAction(): Action {
     when(this["type"].asString()){
         "answer" -> return Answer(this)
         "redirect" -> return Redirect(this)
+        "none" -> return None()
         else -> throw RuntimeException("Unexpected type '${this["type"]}' in: ${toString(WriterConfig.PRETTY_PRINT)}")
     }
 }
@@ -52,4 +53,8 @@ class Redirect(json: JsonObject): Action() {
     override fun invoke(bot: Bot, update: Update, db: Database) {
         db[goto](bot, update, db)
     }
+}
+
+class None : Action() {
+    override fun invoke(bot: Bot, update: Update, db: Database) {}
 }
