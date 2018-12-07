@@ -1,7 +1,7 @@
 {
   "bonjour": {
-    "type": "answer",
-    "text": "Bonjour!"
+    "type": "redirect",
+    "goto": "salut"
   },
   "salut .+": {
     "type": "answer",
@@ -12,7 +12,11 @@
     "text": "Je ne comprends pas le message!"
   },
   "salut": {
-    "type": "redirect",
-    "goto": "bonjour"
+    "type": "answer",
+    "text": ["Bonjour !", "Salut !"]
+  },
+  "/start": {
+    "type": "answer",
+    "text": "Bienvenue !"
   }
 }

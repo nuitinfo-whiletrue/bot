@@ -4,6 +4,7 @@ import com.eclipsesource.json.JsonObject
 import com.eclipsesource.json.WriterConfig
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
 import org.telegram.telegrambots.meta.api.objects.Update
+import kotlin.random.Random
 
 fun JsonObject.asAction(): Action {
     when(this["type"].asString()){
@@ -21,16 +22,26 @@ abstract class Action {
 
 class Answer(json: JsonObject): Action() {
 
-    val text = json["text"]!!.asString()
+    val value = json["text"]
+
+    val _text = if (value.isString) value.asString() else null
+    val _texts = if (value.isArray) value.asArray() else null
 
     override fun invoke(bot: Bot, update: Update, db: Database) {
         val msg = SendMessage().apply {
             chatId = update.message?.chatId.toString()
-            text = this@Answer.text
+
+            if (_text != null)
+                text = _text
+            else _texts!!.let {
+                text = it.values().randomize().asString()
+            }
         }
 
         bot.execute(msg)
     }
+
+    fun <T> List<T>.randomize() = this[Random.nextInt(size)]
 }
 
 class Redirect(json: JsonObject): Action() {
