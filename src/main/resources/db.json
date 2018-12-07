@@ -3,7 +3,11 @@
     "type": "answer",
     "text": "Bonjour!"
   },
-  "*": {
+  "salut .+": {
+    "type": "answer",
+    "text": "Bonjour à toi aussi!"
+  },
+  ".*": {
     "type": "answer",
     "text": "Je ne comprends pas le message!"
   }
