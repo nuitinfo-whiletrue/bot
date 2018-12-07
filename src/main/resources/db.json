@@ -1,7 +1,7 @@
 {
   "bonjour": {
     "type": "answer",
-    "text": "Bonjour!"
+    "text": "Bonjour ! Je suis jean michel sarcasme."
   },
   "*": {
     "type": "answer",
@@ -34,8 +34,29 @@
   "42":{
     "type":"answer",
     "text": "Félicitations vous êtes engagé !"
+  },
+  "hey":{
+    "type":"answer",
+    "text": "ho"
+  },
+  "oui":{
+    "type":"answer",
+    "text": "... oui"
+  },
+  "non":{
+    "type":"answer",
+    "text": "si"
+  },
+  "pain au chocolat":{
+    "type":"answer",
+    "text": "Un, je suis pas boulanger. Deux, Tu sors. Trois, repars dans le nord d'où tu viens"
   }
-
+  
+  
+  
+  
+  
+  
 
 
 }
