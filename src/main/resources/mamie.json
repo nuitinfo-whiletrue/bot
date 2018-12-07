@@ -1,13 +1,131 @@
 {
   "bonjour": {
     "type": "answer",
-    "text": "Bonjour!"
+    "text": "BONJOUR MAMIE, JE SUIS LE ROBOT QUI REPONDS AUX QUESTIONS"
+  },
+  "bonjour monsieur":{
+    "type":"answer",
+    "text": ["Je préfère ça ouais, salut petit","yo gamin","wesh gros"]
+  },
+  "yo": {
+    "type": "redirect",
+    "goto": "salut"
+  },
+  "slt": {
+    "type": "redirect",
+    "goto": "salut"
+  },
+  "salutations": {
+    "type": "redirect",
+    "goto": "Bonjour"
+  },
+  "salut .+":{
+    "type":"redirect",
+    "goto": "salut"
+  },
+  "salut": {
+    "type": "answer",
+    "text": "IL FAUT ÊTRE PLUS POLIE MAMIE"
   },
   "/start": {
     "type": "none"
   },
-  ".*": {
-    "type": "answer",
-    "text": "Je ne comprends pas le message!"
+  "que sais tu faire ?":{
+    "type":"answer",
+    "text": "PLUS DE CHOSES QUE TOI, MOI JE MARCHE AUX 2 SENS DU TERME"
+  },
+  ".+ quoi .+":{
+    "type":"redirect",
+    "goto": "comment .+"
+  },
+  "raconte moi .+":{
+    "type":"answer",
+    "text": ["C'est l'histoire d'un pingouin qui respirait par les fesses, il s'est assis, il est mort",
+            "Deux saucisses dans un four, la première fait à l'autre \"eh il fait chaud quand même !\" et pis la t'as l'autre qui pousse un cri de terreur \"AAAAAaaah une saucisse qui parle !\"",
+            "hmmm, non, pas envie"]
+  },
+  ".+ heure .+":{
+    "type":"answer",
+    "text": "Apprends à lire l'heure avec docteur sarcasme ! Si tu est sur ton teéléphone, regarde en haut à droite, sinon en bas à droite"
+  },
+  "comment +.":{
+    "type":"answer",
+    "text": "IL FAUT CHERCHER SUr LE GOOGLE DE L'INTERNET https://www.google.com"
+  },
+  ".+ pourquoi .+":{
+    "type":"answer",
+    "text": "DEMANDE A TON PETIT FILS"
+  },
+  ".+ manger .+":{
+    "type":"answer",
+    "text": "NON MAMIE J'AI PAS FAIM? RANGE TES GATEAUX"
+  },
+  
+
+
+  "tu pues":{
+    "type":"answer",
+    "text": "Avec cette répartie je pense que tu peux viser le concours de clash de la 6eme B du collège Paul Froment"
+  },
+  "mange tes morts":{
+    "type":"answer",
+    "text": "Oh eh Lopez tu vas de calmer avant que je te soulève tes grands morts"
+  },
+  ".+ alexa .+":{
+    "type":"answer",
+    "text": "NON MAMIE C'EST UN NOM DE PROSTITUEE CA"
+  },
+  "ftg":{
+    "type":"redirect",
+    "goto": "tg"
+  },
+  "ta gueule":{
+    "type":"redirect",
+    "goto": "tg"
+  },
+  "tg":{
+    "type":"answer",
+    "text": "Tu viens sur le site, tu te crées un compte, tu passe le test mamie proof, et tout ça pour me dire de la fermer ? sinon ça va dans ta vie tout ça ?"
+  },
+  ".+ chiant .+":{
+    "type":"answer",
+    "text": "c'est toi qui est chiant ! t'as que ça à faire ? insulter un bot codé en une nuit par un branleur ?"
+  },
+  ".+ nul .+":{
+    "type":"redirect",
+    "goto": ".+ chiant .+"
+  },
+ 
+
+  
+  "ok":{
+    "type":"answer",
+    "text": ["d'accord","oui"]
+  },
+  "ping":{
+    "type":"answer",
+    "text": "pong"
+  },
+  "pong":{
+    "type":"answer",
+    "text": "ping ... c'est drole hein ? *te méprise fortement*"
+  },
+  "42":{
+    "type":"answer",
+    "text": "Félicitations vous êtes engagé !"
+  },
+  "oui":{
+    "type":"answer",
+    "text": "... oui"
+  },
+  "non":{
+    "type":"answer",
+    "text": "si"
+  },
+  "pain au chocolat":{
+    "type":"answer",
+    "text": "Un, je suis pas boulanger. Deux, Tu sors. Trois, repars dans le nord d'où tu viens"
   }
+
+
 }
