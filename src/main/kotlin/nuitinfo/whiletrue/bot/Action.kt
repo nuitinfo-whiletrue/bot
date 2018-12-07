@@ -9,12 +9,15 @@ import kotlin.random.Random
 fun JsonObject.asAction(): Action {
     when(this["type"].asString()){
         "answer" -> return Answer(this)
+        "redirect" -> return Redirect(this)
         else -> throw RuntimeException("Unexpected type '${this["type"]}' in: ${toString(WriterConfig.PRETTY_PRINT)}")
     }
 }
 
+val errorAction = Answer(JsonObject().add("text", "Je n'ai pas compris."))
+
 abstract class Action {
-    abstract operator fun invoke(bot: Bot, update: Update)
+    abstract operator fun invoke(bot: Bot, update: Update, db: Database)
 }
 
 class Answer(json: JsonObject): Action() {
@@ -24,7 +27,7 @@ class Answer(json: JsonObject): Action() {
     val _text = if (value.isString) value.asString() else null
     val _texts = if (value.isArray) value.asArray() else null
 
-    override fun invoke(bot: Bot, update: Update) {
+    override fun invoke(bot: Bot, update: Update, db: Database) {
         val msg = SendMessage().apply {
             chatId = update.message?.chatId.toString()
 
@@ -39,4 +42,13 @@ class Answer(json: JsonObject): Action() {
     }
 
     fun <T> List<T>.randomize() = this[Random.nextInt(size)]
+}
+
+class Redirect(json: JsonObject): Action() {
+
+    val goto = json["goto"]!!.asString()
+
+    override fun invoke(bot: Bot, update: Update, db: Database) {
+        db[goto](bot, update, db)
+    }
 }

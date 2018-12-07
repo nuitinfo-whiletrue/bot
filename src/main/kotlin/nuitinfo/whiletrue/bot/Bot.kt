@@ -28,7 +28,7 @@ class Bot private constructor(private val token: String) : TelegramLongPollingBo
         println(update.message?.date.toString() + "> " + update.message?.contact?.lastName + ": " + update.message?.text)
 
         update.message?.text?.let {
-            database[it](this, update)
+            database[it](this, update, database)
         }
     }
 

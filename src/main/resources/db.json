@@ -1,9 +1,13 @@
 {
   "bonjour": {
-    "type": "answer",
-    "text": "Bonjour!"
+    "type": "redirect",
+    "goto": "salut"
   },
-  "*": {
+  "salut .+": {
+    "type": "answer",
+    "text": "Bonjour à toi aussi!"
+  },
+  ".*": {
     "type": "answer",
     "text": "Je ne comprends pas le message!"
   },
