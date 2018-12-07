@@ -6,5 +6,9 @@
   "*": {
     "type": "answer",
     "text": "Je ne comprends pas le message!"
+  },
+  "salut": {
+    "type": "redirect",
+    "goto": "bonjour"
   }
 }
