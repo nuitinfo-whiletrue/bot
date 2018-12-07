@@ -3,6 +3,9 @@
     "type": "answer",
     "text": "Bonjour!"
   },
+  "/start": {
+    "type": "none"
+  },
   ".*": {
     "type": "answer",
     "text": "Je ne comprends pas le message!"

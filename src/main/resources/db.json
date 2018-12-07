@@ -3,6 +3,13 @@
     "type": "redirect",
     "goto": "salut"
   },
+  "salut": {
+    "type": "answer",
+    "text": ["Bonjour !", "Salut !"]
+  },
+  "/start": {
+    "type": "none"
+  },
   "salut .+": {
     "type": "answer",
     "text": "Bonjour à toi aussi!"
@@ -10,12 +17,5 @@
   ".*": {
     "type": "answer",
     "text": "Je ne comprends pas le message!"
-  },
-  "salut": {
-    "type": "answer",
-    "text": ["Bonjour !", "Salut !"]
-  },
-  "/start": {
-    "type": "none"
   }
 }
