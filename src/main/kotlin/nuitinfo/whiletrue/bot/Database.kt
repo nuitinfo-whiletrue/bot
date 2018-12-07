@@ -5,11 +5,17 @@ import com.eclipsesource.json.JsonObject
 import java.io.File
 import java.nio.charset.Charset
 
-class Database(val data: Map<String, Action>) {
+class Database(data: Map<String, Action>) {
+
+    val data = data.map { it.key.toRegex(RegexOption.IGNORE_CASE) to it.value }.toMap()
 
     constructor(file: File): this(readFromFile(file))
 
-    operator fun get(msg: String): Action = data[msg.toLowerCase()] ?: data["*"]!!
+    operator fun get(msg: String): Action {
+        return data.asSequence()
+            .find { msg.matches(it.key) }
+            ?.value ?: errorAction
+    }
 
     companion object {
         fun readFromFile(file: File): Map<String, Action> {

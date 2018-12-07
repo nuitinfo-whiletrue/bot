@@ -12,6 +12,8 @@ fun JsonObject.asAction(): Action {
     }
 }
 
+val errorAction = Answer(JsonObject().add("text", "Je n'ai pas compris."))
+
 abstract class Action {
     abstract operator fun invoke(bot: Bot, update: Update)
 }
