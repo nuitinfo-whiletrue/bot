@@ -11,6 +11,10 @@
     "type": "redirect",
     "goto": "salut"
   },
+  "slt": {
+    "type": "redirect",
+    "goto": "salut"
+  },
   "salutations": {
     "type": "redirect",
     "goto": "Bonjour"
@@ -33,6 +37,14 @@
     "type":"answer",
     "text": "La plupart du temps j'essaye de te rabaisser ou de t'envoyer balader mais des fois je t'aide parceque tu me fais un peu pitié"
   },
+  "tfk":{
+    "type":"redirect",
+    "goto": "que sais tu faire ?"
+  },
+  ".+ quoi .+":{
+    "type":"redirect",
+    "goto": "que sais tu faire ?"
+  },
   "raconte moi .+":{
     "type":"answer",
     "text": ["C'est l'histoire d'un pingouin qui respirait par les fesses, il s'est assis, il est mort",
@@ -47,10 +59,14 @@
     "type":"answer",
     "text": "Si tu vas sur google, et que tu tapes \"comment + le truc que tu ne sais pas faire\" (c'est à dire 80% des choses) c'est possible qu'il ne t'envoie pas chier comme moi. Vu que t'es un assisté je vais même te mettre un lien https://www.google.com"
   },
+  ".+ pourquoi .+":{
+    "type":"answer",
+    "text": "parceque toi, c'est toujours de ta faute de toute façon"
+  },
 
 
 
-  "t'es nul":{
+  "tu pues":{
     "type":"answer",
     "text": "Avec cette répartie je pense que tu peux viser le concours de clash de la 6eme B du collège Paul Froment"
   },
@@ -62,9 +78,41 @@
     "type":"answer",
     "text": "ho eh, on insulte pas les bots comme ça"
   },
+  "ftg":{
+    "type":"redirect",
+    "goto": "tg"
+  },
+  "ta gueule":{
+    "type":"redirect",
+    "goto": "tg"
+  },
+  "tg":{
+    "type":"answer",
+    "text": "Tu viens sur le site, tu te crées un compte, tu passe le test mamie proof, et tout ça pour me dire de la fermer ? sinon ça va dans ta vie tout ça ?"
+  },
+  ".+ chiant .+":{
+    "type":"answer",
+    "text": "c'est toi qui est chiant ! t'as que ça à faire ? insulter un bot codé en une nuit par un branleur ?"
+  },
+  ".+ nul .+":{
+    "type":"redirect",
+    "goto": ".+ chiant .+"
+  },
  
 
-
+  
+  "ok":{
+    "type":"answer",
+    "text": ["d'accord","oui"]
+  },
+  "ping":{
+    "type":"answer",
+    "text": "pong"
+  },
+  "pong":{
+    "type":"answer",
+    "text": "ping ... c'est drole hein ? *te méprise fortement*"
+  },
   "42":{
     "type":"answer",
     "text": "Félicitations vous êtes engagé !"
