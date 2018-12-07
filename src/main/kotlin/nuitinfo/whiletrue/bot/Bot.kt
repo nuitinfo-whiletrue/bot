@@ -6,6 +6,7 @@ import org.telegram.telegrambots.meta.TelegramBotsApi
 import org.telegram.telegrambots.meta.api.objects.Update
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException
 import java.io.File
+import kotlin.random.Random
 
 class Bot private constructor(private val token: String) : TelegramLongPollingBot() {
 
@@ -27,7 +28,7 @@ class Bot private constructor(private val token: String) : TelegramLongPollingBo
         println(update.message?.date.toString() + "> " + update.message?.contact?.lastName + ": " + update.message?.text)
 
         update.message?.text?.let {
-            database[it](this, update)
+            database[it](this, update, database)
         }
     }
 

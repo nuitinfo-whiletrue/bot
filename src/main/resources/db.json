@@ -3,10 +3,32 @@
     "type": "answer",
     "text": "Bonjour ! Je suis jean michel sarcasme."
   },
-  "*": {
-    "type": "answer",
-    "text": "Apprends à parler, réfléchis à si je peux vraiment répondre à ta question et en suite reviens e voir, mais pas avant"
+  "bonjour monsieur":{
+    "type":"answer",
+    "text": ["Je préfère ça ouais, salut petit","yo gamin","wesh gros"]
   },
+  "yo": {
+    "type": "redirect",
+    "goto": "salut"
+  },
+  "salutations": {
+    "type": "redirect",
+    "goto": "Bonjour"
+  },
+  "salut .+":{
+    "type":"redirect",
+    "text": "salut"
+  },
+  "salut": {
+    "type": "answer",
+    "text": "Tu parles mieux quand tu t'adresses à moi, on dit \"bonjour monsieur\""
+  },
+  "hey":{
+    "type":"answer",
+    "text": "ho"
+  },
+
+
   "ça va ?":{
     "type":"answer",
     "text": "oui, Je ne te demande pas comment toi tu vas, je t'avoue que je m'en fiche un peu"
@@ -15,6 +37,23 @@
     "type":"answer",
     "text": "La plupart du temps j'essaye de te rabaisser ou de t'envoyer balader mais des fois je t'aide parceque tu me fais un peu pitié"
   },
+  "raconte moi .+":{
+    "type":"answer",
+    "text": ["C'est l'histoire d'un pingouin qui respirait par les fesses, il s'est assis, il est mort",
+            "Deux saucisses dans un four, la première fait à l'autre \"eh il fait chaud quand même !\" et pis la t'as l'autre qui pousse un cri de terreur \"AAAAAaaah une saucisse qui parle !\"",
+            "hmmm, non, pas envie"]
+  },
+  ".+ heure .+":{
+    "type":"answer",
+    "text": "Apprends à lire l'heure avec docteur sarcasme ! Si tu est sur ton teéléphone, regarde en haut à droite, sinon en bas à droite"
+  },
+  "comment +.":{
+    "type":"answer",
+    "text": "Si tu vas sur google, et que tu tapes \"comment + le truc que tu ne sais pas faire\" (c'est à dire 80% des choses) c'est possible qu'il ne t'envoie pas chier comme moi. Vu que t'es un assisté je vais même te mettre un lien https://www.google.com"
+  },
+
+
+
   "t'es nul":{
     "type":"answer",
     "text": "Avec cette répartie je pense que tu peux viser le concours de clash de la 6eme B du collège Paul Froment"
@@ -23,21 +62,16 @@
     "type":"answer",
     "text": "Oh eh Lopez tu vas de calmer avant que je te soulève tes grands morts"
   },
-  "salut":{
+  ".+ alexa .+":{
     "type":"answer",
-    "text": "tu me parles mieux que ça petit, on dit \"bonjour monsieur\""
+    "text": "ho eh, on insulte pas les bots comme ça"
   },
-  "bonjour monsieur":{
-    "type":"answer",
-    "text": "Je préfère ça ouais, salut petit"
-  },
+ 
+
+
   "42":{
     "type":"answer",
     "text": "Félicitations vous êtes engagé !"
-  },
-  "hey":{
-    "type":"answer",
-    "text": "ho"
   },
   "oui":{
     "type":"answer",
@@ -50,13 +84,16 @@
   "pain au chocolat":{
     "type":"answer",
     "text": "Un, je suis pas boulanger. Deux, Tu sors. Trois, repars dans le nord d'où tu viens"
+  },
+
+
+
+  "/start": {
+    "type": "answer",
+    "text": "Vous êtes ici chez le bot sarcasme, commencez par le saluer !"
+  },
+  ".*": {
+    "type": "answer",
+    "text": "Apprends à écrire, réfléchis à si je peux vraiment répondre à ta question et en suite reviens me voir, mais pas avant"
   }
-  
-  
-  
-  
-  
-  
-
-
 }
