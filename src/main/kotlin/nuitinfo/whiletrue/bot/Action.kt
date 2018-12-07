@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update
 fun JsonObject.asAction(): Action {
     when(this["type"].asString()){
         "answer" -> return Answer(this)
+        "redirect" -> return Redirect(this)
         else -> throw RuntimeException("Unexpected type '${this["type"]}' in: ${toString(WriterConfig.PRETTY_PRINT)}")
     }
 }
@@ -15,19 +16,28 @@ fun JsonObject.asAction(): Action {
 val errorAction = Answer(JsonObject().add("text", "Je n'ai pas compris."))
 
 abstract class Action {
-    abstract operator fun invoke(bot: Bot, update: Update)
+    abstract operator fun invoke(bot: Bot, update: Update, db: Database)
 }
 
 class Answer(json: JsonObject): Action() {
 
     val text = json["text"]!!.asString()
 
-    override fun invoke(bot: Bot, update: Update) {
+    override fun invoke(bot: Bot, update: Update, db: Database) {
         val msg = SendMessage().apply {
             chatId = update.message?.chatId.toString()
             text = this@Answer.text
         }
 
         bot.execute(msg)
+    }
+}
+
+class Redirect(json: JsonObject): Action() {
+
+    val goto = json["goto"]!!.asString()
+
+    override fun invoke(bot: Bot, update: Update, db: Database) {
+        db[goto](bot, update, db)
     }
 }
