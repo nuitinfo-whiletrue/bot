@@ -128,6 +128,17 @@
   "pain au chocolat":{
     "type":"answer",
     "text": "Un, je suis pas boulanger. Deux, Tu sors. Trois, repars dans le nord d'où tu viens"
+  },
+  "/start": {
+    "type": "none"
+  },
+  "salut .+": {
+    "type": "answer",
+    "text": "Bonjour à toi aussi!"
+  },
+  ".*": {
+    "type": "answer",
+    "text": "Je ne comprends pas le message!"
   }
 
 

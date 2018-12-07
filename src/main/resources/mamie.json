@@ -27,11 +27,8 @@
     "type": "answer",
     "text": "IL FAUT ÊTRE PLUS POLIE MAMIE"
   },
-
-
-  "ça va ?":{
-    "type":"answer",
-    "text": "OUI MAMIE JE VAIS BIEN, TU AS PRIS TES CACHETS ?"
+  "/start": {
+    "type": "none"
   },
   "que sais tu faire ?":{
     "type":"answer",
