@@ -1,0 +1,10 @@
+{
+  "bonjour": {
+    "type": "answer",
+    "text": "Bonjour!"
+  },
+  "*": {
+    "type": "answer",
+    "text": "Je ne comprends pas le message!"
+  }
+}
