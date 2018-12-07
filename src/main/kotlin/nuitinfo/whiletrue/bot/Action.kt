@@ -32,6 +32,7 @@ class Answer(json: JsonObject): Action() {
         val msg = SendMessage().apply {
             chatId = update.message?.chatId.toString()
             replyToMessageId = update.message?.messageId
+            enableMarkdown(true)
 
             if (_text != null)
                 text = _text
