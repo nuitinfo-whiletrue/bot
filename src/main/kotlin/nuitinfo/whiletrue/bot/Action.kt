@@ -30,6 +30,7 @@ class Answer(json: JsonObject): Action() {
     override fun invoke(bot: Bot, update: Update, db: Database) {
         val msg = SendMessage().apply {
             chatId = update.message?.chatId.toString()
+            replyToMessageId = update.message?.messageId
 
             if (_text != null)
                 text = _text
