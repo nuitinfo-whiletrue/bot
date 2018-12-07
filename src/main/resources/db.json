@@ -21,11 +21,7 @@
   },
   "salut": {
     "type": "answer",
-    "text": "Tu parles mieux quand tu t'adresses à moi, on dit \"bonjour monsieur\""
-  },
-  "hey":{
-    "type":"answer",
-    "text": "ho"
+    "text": "C'est pas comme ça qu'on parle petit, on dit bonjour monsieur"
   },
 
 
@@ -84,16 +80,7 @@
   "pain au chocolat":{
     "type":"answer",
     "text": "Un, je suis pas boulanger. Deux, Tu sors. Trois, repars dans le nord d'où tu viens"
-  },
-
-
-
-  "/start": {
-    "type": "answer",
-    "text": "Vous êtes ici chez le bot sarcasme, commencez par le saluer !"
-  },
-  ".*": {
-    "type": "answer",
-    "text": "Apprends à écrire, réfléchis à si je peux vraiment répondre à ta question et en suite reviens me voir, mais pas avant"
   }
+
+
 }
